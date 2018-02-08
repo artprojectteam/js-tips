@@ -1,0 +1,19 @@
+root: true
+parser: babel-eslint
+
+env:
+  commonjs: true
+  browser: true
+  node: true
+  es6: true
+
+# JavaScript Standard Styleを適用
+extends: standard
+
+rules:
+  no-mixed-spaces-and-tabs: error
+  eol-last: off
+
+
+globals:
+  describe: off
