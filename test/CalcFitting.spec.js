@@ -1,7 +1,7 @@
 import assert from 'power-assert'
 import CalcFitting from '../tips/CalcFitting'
 
-describe('CalcFitting', () => {
+describe('画像を任意のサイズにフィットさせる数値(CalcFitting)', () => {
   it('要素(5:3) | 画像(16:9)', () => {
     const res = CalcFitting(1200, 720, 1920, 1080)
 
