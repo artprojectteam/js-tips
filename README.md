@@ -1,2 +1,1 @@
-# js-tips
-javascript tips
+# javascript tips
