@@ -6,6 +6,7 @@ env:
   browser: true
   node: true
   es6: true
+  mocha: true
 
 # JavaScript Standard Styleを適用
 extends: standard
@@ -15,5 +16,4 @@ rules:
   eol-last: off
 
 
-globals:
-  describe: off
+#globals:
