@@ -17,3 +17,4 @@ Tips is written at Babel & Javascript Standard Style.
 ## Constant List
 
 - [CSSアニメーション キー名](const/CssAnimation.js)
+- [WindowsタッチPC対応、クロスブラウザクリックイベント名](const/PointerEvent.js)
