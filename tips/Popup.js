@@ -26,7 +26,7 @@ const ops = {
  *
  * @param {string} url
  * @param {string} [name = 'popup'] - window name
- * @param {object} [option = {}] - opsで必要なデータのみ変更 ex. {width:400}
+ * @param {object} [option = {}] - opsで定義しているデータで特定のパラメータを変更 ex. {width:400}
  * @param {string} [other = ''] - ex. 'abc=0,cdf=1'
  * @return {Window | null}
  */
@@ -39,7 +39,7 @@ export default (url, name = 'popup', option = {}, other = '') => {
   })
 
   let features = arr.join(',')
-  if (other !== '') features += `,${other}` // 初期設定の他に
+  if (other !== '') features += `,${other}` // 初期設定の他に付け足す必要がある場合
 
   return window.open(url, name, features)
 }
