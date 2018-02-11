@@ -2,7 +2,7 @@
 
 Tips is written at Babel & Javascript Standard Style.
 
-## Tips List
+## Tips List (tips/)
 
 - [画像を任意の要素サイズにフィットするようにサイズを計算する](tips/CalcFitting.js)
 - [指定した小数点以下の桁数を切り捨てる](tips/DigitFloor.js)
@@ -13,8 +13,9 @@ Tips is written at Babel & Javascript Standard Style.
 - [現在のスクロール位置取得](tips/GetCurrentScrollPosition.js)
 - [ブラウザサイズの取得](tips/GetBrowserSize.js)
 - [ドキュメント(body)サイズの取得](tips/GetDocumentSize.js)
+- [いまどきのマウスホイールイベント](tips/EventWheel.js)
 
-## Constant List
+## Constant List (const/)
 
 - [CSSアニメーション キー名](const/CssAnimation.js)
 - [WindowsタッチPC対応、クロスブラウザクリックイベント名](const/PointerEvent.js)
