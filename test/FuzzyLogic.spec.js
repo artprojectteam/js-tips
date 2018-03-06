@@ -76,39 +76,39 @@ describe('ファジィ理論 | 右肩下がりの逆傾斜 (FuzzyLogic.ReverseGr
     assert.equal(getHungerMessage(100), '満腹')
   })
 
-  it('満腹率:80/100 => 満腹', ()=>{
+  it('満腹率:80/100 => 満腹', () => {
     assert.equal(getHungerMessage(80), '満腹')
   })
 
-  it('満腹率:70/100 => 小腹すいた', ()=>{
+  it('満腹率:70/100 => 小腹すいた', () => {
     assert.equal(getHungerMessage(70), '小腹すいた')
   })
 
-  it('満腹率:50/100 => 小腹すいた', ()=>{
+  it('満腹率:50/100 => 小腹すいた', () => {
     assert.equal(getHungerMessage(50), '小腹すいた')
   })
 
-  it('満腹率:40/100 => お腹すいた', ()=>{
+  it('満腹率:40/100 => お腹すいた', () => {
     assert.equal(getHungerMessage(30), 'お腹すいた')
   })
 
-  it('満腹率:30/100 => お腹すいた', ()=>{
+  it('満腹率:30/100 => お腹すいた', () => {
     assert.equal(getHungerMessage(30), 'お腹すいた')
   })
 
-  it('満腹率:20/100 => 早く食べたい', ()=>{
+  it('満腹率:20/100 => 早く食べたい', () => {
     assert.equal(getHungerMessage(20), '早く食べたい')
   })
 
-  it('満腹率:10/100 => 早く食べたい', ()=>{
+  it('満腹率:10/100 => 早く食べたい', () => {
     assert.equal(getHungerMessage(10), '早く食べたい')
   })
 
-  it('満腹率:5/100 => 死にそうだ', ()=>{
+  it('満腹率:5/100 => 死にそうだ', () => {
     assert.equal(getHungerMessage(1), '死にそうだ')
   })
 
-  it('満腹率:0/100 => 死にそうだ', ()=>{
+  it('満腹率:0/100 => 死にそうだ', () => {
     assert.equal(getHungerMessage(0), '死にそうだ')
   })
 })
