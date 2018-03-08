@@ -112,3 +112,59 @@ describe('ファジィ理論 | 右肩下がりの逆傾斜 (FuzzyLogic.ReverseGr
     assert.equal(getHungerMessage(0), '死にそうだ')
   })
 })
+
+describe('ファジィ理論 | 三角形型 (FuzzyLogic.Triangle)', () => {
+  /**
+   * 集中力のピーク
+   * 0〜6時 => だらけたい
+   * 7〜10時 => 頑張らなければと思っている
+   * 11〜12時 => 頑張っています
+   * 13時 => ゾーンに入った！
+   * 14時 => 頑張っています
+   * 15〜17時 => 頑張らなければと思っている
+   * 18〜23時 => だらけたい
+   * @param time
+   * @return {string}
+   */
+  const getConditionMessage = (time) => {
+    const condition = FuzzyLogic.Triangle(time, 0, 13, 23)
+    if (condition < 0.5) return 'だらけたい'
+    if (condition < 0.8) return '頑張らなければと思っている'
+    if (condition === 1) return 'ゾーンに入った！'
+    return '頑張っています'
+  }
+
+  it('0時時点の集中力 => だらけたい', () => {
+    assert.equal(getConditionMessage(0), 'だらけたい')
+  })
+  it('6時時点の集中力 => だらけたい', () => {
+    assert.equal(getConditionMessage(6), 'だらけたい')
+  })
+  it('7時時点の集中力 => 頑張らなければと思っている', () => {
+    assert.equal(getConditionMessage(7), '頑張らなければと思っている')
+  })
+  it('10時時点の集中力 => 頑張らなければと思っている', () => {
+    assert.equal(getConditionMessage(10), '頑張らなければと思っている')
+  })
+  it('11時時点の集中力 => 頑張っています', () => {
+    assert.equal(getConditionMessage(11), '頑張っています')
+  })
+  it('12時時点の集中力 => 頑張っています', () => {
+    assert.equal(getConditionMessage(12), '頑張っています')
+  })
+  it('13時時点の集中力 => ゾーンに入った！', () => {
+    assert.equal(getConditionMessage(13), 'ゾーンに入った！')
+  })
+  it('14時時点の集中力 => 頑張っています', () => {
+    assert.equal(getConditionMessage(14), '頑張っています')
+  })
+  it('15時時点の集中力 => 頑張らなければと思っている', () => {
+    assert.equal(getConditionMessage(15), '頑張らなければと思っている')
+  })
+  it('18時時点の集中力 => だらけたい', () => {
+    assert.equal(getConditionMessage(18), 'だらけたい')
+  })
+  it('23時時点の集中力 => だらけたい', () => {
+    assert.equal(getConditionMessage(23), 'だらけたい')
+  })
+})
