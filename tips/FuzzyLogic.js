@@ -47,4 +47,21 @@ export default class FuzzyLogic {
     if (value > x0 && value < x1) return this.Grade(value, x0, x1)
     return this.ReverseGrade(value, x1, x2)
   }
+
+  /**
+   * 台形型メンバーシップ
+   * @param value {number}
+   * @param x0 {number} - 右肩上がり方向の起点
+   * @param x1 {number} - 右肩上がり方向の終点
+   * @param x2 {number} - 右肩下がり方向の起点
+   * @param x3 {number} - 右肩下がり方向の終点
+   * @return {number}
+   * @constructor
+   */
+  static Trapezoid (value, x0, x1, x2, x3) {
+    if (value <= x0 || value >= x3) return 0
+    if (value >= x1 && value <= x2) return 1
+    if (value > x0 && value < x1) return this.Grade(value, x0, x1)
+    return this.ReverseGrade(value, x2, x3)
+  }
 }

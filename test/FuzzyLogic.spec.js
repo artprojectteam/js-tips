@@ -8,7 +8,7 @@ describe('ファジィ理論 | 右肩上がりの傾斜 (FuzzyLogic.Grade)', () 
    * 30%以上〜80%未満 => 半分くらい
    * 80%以上〜100%未満 => もう少し
    * 100%以上 => Lvアップ
-   * @param exp - 経験値
+   * @param exp {number} - 経験値
    * @return {*}
    */
   const getNowExpMessage = (exp) => {
@@ -123,7 +123,7 @@ describe('ファジィ理論 | 三角形型 (FuzzyLogic.Triangle)', () => {
    * 14時 => 頑張っています
    * 15〜17時 => 頑張らなければと思っている
    * 18〜23時 => だらけたい
-   * @param time
+   * @param time {number}
    * @return {string}
    */
   const getConditionMessage = (time) => {
@@ -166,5 +166,47 @@ describe('ファジィ理論 | 三角形型 (FuzzyLogic.Triangle)', () => {
   })
   it('23時時点の集中力 => だらけたい', () => {
     assert.equal(getConditionMessage(23), 'だらけたい')
+  })
+})
+
+describe('ファジィ理論 | 台形型 (FuzzyLogic.Trapezoid)', () => {
+  /**
+   * 進んだ距離による相手との接近率
+   * 0% => 見えない
+   * 1%〜99% => 気配を感じる
+   * 100% => 見える範囲
+   * @param distance {number}
+   * @return {string}
+   */
+  const getAccessMessage = (distance) => {
+    const access = FuzzyLogic.Trapezoid(distance, 0, 50, 100, 150)
+    if (access === 0) return '見えない'
+    if (access < 1) return '気配を感じる'
+    return '見える範囲'
+  }
+
+  it('0m進んだ => 見えない', () => {
+    assert.equal(getAccessMessage(0), '見えない')
+  })
+  it('20m進んだ => 気配を感じる', () => {
+    assert.equal(getAccessMessage(20), '気配を感じる')
+  })
+  it('40m進んだ => 気配を感じる', () => {
+    assert.equal(getAccessMessage(40), '気配を感じる')
+  })
+  it('50m進んだ => 見える範囲', () => {
+    assert.equal(getAccessMessage(50), '見える範囲')
+  })
+  it('100m進んだ => 見える範囲', () => {
+    assert.equal(getAccessMessage(100), '見える範囲')
+  })
+  it('110m進んだ => 気配を感じる', () => {
+    assert.equal(getAccessMessage(110), '気配を感じる')
+  })
+  it('140m進んだ => 気配を感じる', () => {
+    assert.equal(getAccessMessage(140), '気配を感じる')
+  })
+  it('150m進んだ => 見えない', () => {
+    assert.equal(getAccessMessage(150), '見えない')
   })
 })
