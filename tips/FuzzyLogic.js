@@ -1,4 +1,6 @@
-// ファジィ理論
+/**
+ * ファジィ論理
+ */
 export default class FuzzyLogic {
   /**
    * 右肩上がりの傾斜型メンバーシップ

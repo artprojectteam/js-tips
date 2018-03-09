@@ -1,7 +1,7 @@
 import assert from 'power-assert'
 import FuzzyLogic from '../tips/FuzzyLogic'
 
-describe('ファジィ理論 | 右肩上がりの傾斜 (FuzzyLogic.Grade)', () => {
+describe('ファジィ論理 | 右肩上がりの傾斜 (FuzzyLogic.Grade)', () => {
   /**
    * 現在の経験値/次の経験値(25,000)に対するメッセージ
    * 30%未満 => 全然
@@ -52,7 +52,7 @@ describe('ファジィ理論 | 右肩上がりの傾斜 (FuzzyLogic.Grade)', () 
   })
 })
 
-describe('ファジィ理論 | 右肩下がりの逆傾斜 (FuzzyLogic.ReverseGrade)', () => {
+describe('ファジィ論理 | 右肩下がりの逆傾斜 (FuzzyLogic.ReverseGrade)', () => {
   /**
    * 空腹率の割合におけるメッセージ
    * 80%以上 => 満腹
@@ -113,7 +113,7 @@ describe('ファジィ理論 | 右肩下がりの逆傾斜 (FuzzyLogic.ReverseGr
   })
 })
 
-describe('ファジィ理論 | 三角形型 (FuzzyLogic.Triangle)', () => {
+describe('ファジィ論理 | 三角形型 (FuzzyLogic.Triangle)', () => {
   /**
    * 集中力のピーク
    * 0〜6時 => だらけたい
@@ -169,7 +169,7 @@ describe('ファジィ理論 | 三角形型 (FuzzyLogic.Triangle)', () => {
   })
 })
 
-describe('ファジィ理論 | 台形型 (FuzzyLogic.Trapezoid)', () => {
+describe('ファジィ論理 | 台形型 (FuzzyLogic.Trapezoid)', () => {
   /**
    * 進んだ距離による相手との接近率
    * 0% => 見えない

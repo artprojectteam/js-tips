@@ -14,7 +14,7 @@ Tips is written at Babel & Javascript Standard Style.
 - [ブラウザサイズの取得](tips/GetBrowserSize.js)
 - [ドキュメント(body)サイズの取得](tips/GetDocumentSize.js)
 - [いまどきのマウスホイールイベント](tips/EventWheel.js)
-- [ファジィ理論のメンバーシップ関数(傾斜/三角形/台形)](tips/FuzzyLogic.js)
+- [ファジィ論理のメンバーシップ関数(傾斜/三角形/台形)](tips/FuzzyLogic.js)
 - [配列をn個ずつ抜き出す](tips/ArraySlice.js)
 
 ## Constant List (const/)
