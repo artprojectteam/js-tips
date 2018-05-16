@@ -1,6 +1,6 @@
 /**
  * CSS animation event (keyframe, transition) name
- * @type {{START: string, END: string}}
+ * @type {{START: string, ITERATION: string, CANCEL: string, END: string}}
  */
 export const CSS_ANIMATION = {
   // 開始
