@@ -16,6 +16,7 @@ Tips is written at Babel & Javascript Standard Style.
 - [いまどきのマウスホイールイベント](tips/EventWheel.js)
 - [ファジィ論理のメンバーシップ関数(傾斜/三角形/台形)](tips/FuzzyLogic.js)
 - [配列をn個ずつ抜き出す](tips/ArraySlice.js)
+- [ページャロジック](tips/Pager.js)
 
 ## Constant List (const/)
 
