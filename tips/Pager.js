@@ -69,7 +69,7 @@ export default class Pager {
    */
   showFirst () {
     if (this._error.flg) return false
-    return !this._list.some((page) => page === 1)
+    return this._list.every((page) => page > 1)
   }
 
   /**
@@ -78,7 +78,7 @@ export default class Pager {
    */
   showLast () {
     if (this._error.flg) return false
-    return !this._list.some((page) => page === this._total)
+    return this._list.every((page) => page < this._total)
   }
 
   /**
