@@ -24,12 +24,10 @@ function getTarget (size) {
   const gb = Math.pow(kb, 3)
   const tb = Math.pow(kb, 4)
 
-  const returnData = (target, unit) => ({ target, unit })
+  if (size >= tb) return { target: tb, unit: 'TB' }
+  if (size >= gb) return { target: gb, unit: 'GB' }
+  if (size >= mb) return { target: mb, unit: 'MB' }
+  if (size >= kb) return { target: kb, unit: 'KB' }
 
-  if (size >= tb) return returnData(tb, 'TB')
-  if (size >= gb) return returnData(gb, 'GB')
-  if (size >= mb) return returnData(mb, 'MB')
-  if (size >= kb) return returnData(kb, 'KB')
-
-  return returnData(null, 'byte')
+  return { target: null, unit: 'byte' }
 }
