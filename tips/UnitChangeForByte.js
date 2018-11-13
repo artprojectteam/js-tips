@@ -24,15 +24,10 @@ function getTarget (size) {
 
   const returnData = (target, unit) => ({ target, unit })
 
-  if (size >= tb) {
-    return returnData(tb, 'TB')
-  } else if (size >= gb) {
-    return returnData(gb, 'GB')
-  } else if (size >= mb) {
-    return returnData(mb, 'MB')
-  } else if (size >= kb) {
-    return returnData(kb, 'KB')
-  } else {
-    return returnData(null, 'byte')
-  }
+  if (size >= tb) return returnData(tb, 'TB')
+  if (size >= gb) return returnData(gb, 'GB')
+  if (size >= mb) return returnData(mb, 'MB')
+  if (size >= kb) return returnData(kb, 'KB')
+
+  return returnData(null, 'byte')
 }
