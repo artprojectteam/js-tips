@@ -1,12 +1,14 @@
 /**
- * ファイルサイズを適切な単位に変換
+ * ファイルサイズを適切な単位に変換(小数点第二位まで求める)
  * @param {number} size
+ * @param {number} [decimal = 2] 小数点以下第n位まで求めるか
  * @return {*}
  */
-export default (size) => {
+export default (size, decimal = 2) => {
   const { target, unit } = getTarget(size)
+  const d = Math.pow(10, decimal)
 
-  const newSize = target !== null ? Math.floor((size / target) * Math.pow(10, 2)) / Math.pow(10, 2) : size
+  const newSize = target !== null ? Math.floor((size / target) * d) / d : size
 
   return newSize + unit
 }
